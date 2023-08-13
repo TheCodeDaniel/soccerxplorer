@@ -1,16 +1,19 @@
-# soccer_xplorer
 
-A new Flutter project.
 
-## Getting Started
+# Soccer Explorer
 
-This project is a starting point for a Flutter application.
+Soccer Explorer is an app that gives you detailed information about footballers and clubs. It is built with Flutter and Firebase.
 
-A few resources to get you started if this is your first Flutter project:
+## Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Player Profiles**: Get detailed information about your favorite footballers, including their stats, achievements, and career highlights.
+- **Club Information**: Learn more about your favorite clubs, including their history, current squad, and recent performances.
+- **Real-time Updates**: Stay up-to-date with the latest news and scores from the world of soccer.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Technologies
+
+Soccer Explorer is built using Flutter, a mobile app SDK for building high-performance, high-fidelity apps for iOS and Android. It also uses Firebase, a platform developed by Google for creating mobile and web applications.
+
+## Installation
+
+coming soon

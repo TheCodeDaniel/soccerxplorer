@@ -27,6 +27,7 @@ class _GalleryHolderState extends State<GalleryHolder> {
                   "Gallery",
                   style: TextStyle(
                     fontSize: 25,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
                 const SizedBox(height: 20),

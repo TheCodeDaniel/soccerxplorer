@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:soccer_xplorer/pages/subs/filter_page.dart';
 import 'package:soccer_xplorer/pages/subs/notifications.dart';
+import 'package:soccer_xplorer/pages/subs/sitemap.dart';
+import 'package:soccer_xplorer/pages/subs/top_scores.dart';
 import 'package:soccer_xplorer/utils/circle_details.dart';
 
 class HomePage extends StatefulWidget {
@@ -119,11 +121,31 @@ class _HomePageState extends State<HomePage> {
                     },
                   ),
                   CircleDetails(
+                    onTap: () {
+                      Navigator.of(context).push(
+                        PageTransition(
+                          child: const TopScores(),
+                          type: PageTransitionType.rightToLeft,
+                          duration: Duration.zero,
+                          childCurrent: widget,
+                        ),
+                      );
+                    },
                     body: Image.asset("images/alarm.png", height: 40),
                     color: const Color.fromRGBO(30, 221, 118, 1),
                     sub: "Top Scores",
                   ),
                   CircleDetails(
+                    onTap: () {
+                      Navigator.of(context).push(
+                        PageTransition(
+                          child: const SiteMap(),
+                          type: PageTransitionType.rightToLeft,
+                          duration: Duration.zero,
+                          childCurrent: widget,
+                        ),
+                      );
+                    },
                     body: Image.asset("images/route.png", height: 30),
                     color: const Color.fromRGBO(30, 221, 118, 1),
                     sub: "Sitemap",
@@ -157,13 +179,14 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           // first item
                           Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               CircleAvatar(
                                 backgroundColor: Colors.transparent,
                                 backgroundImage:
                                     AssetImage(live[index]['place1image']),
                               ),
-                              const SizedBox(width: 8),
+                              const SizedBox(width: 15),
                               Text(live[index]['place1'])
                             ],
                           ),
@@ -186,14 +209,17 @@ class _HomePageState extends State<HomePage> {
                           ),
                           // third item
                           Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               CircleAvatar(
                                 backgroundColor: Colors.transparent,
                                 backgroundImage:
                                     AssetImage(live[index]['place2image']),
                               ),
-                              const SizedBox(width: 8),
-                              Text(live[index]['place2'])
+                              const SizedBox(width: 15),
+                              Text(
+                                live[index]['place2'],
+                              )
                             ],
                           ),
                         ],
